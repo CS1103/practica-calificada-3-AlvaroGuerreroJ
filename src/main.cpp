@@ -132,6 +132,7 @@ int main()
                               bids);
     }
 
+    std::ofstream file_out("resultado.txt");
     for (auto const& p : products)
     {
         auto const& name = std::get<0>(p);
@@ -140,16 +141,17 @@ int main()
         auto const& min_bid = std::get<3>(p);
         auto const& bids = std::get<4>(p);
 
-        std::cout << name << ","
-                  << max_bid << ","
-                  << average_bid << ","
-                  << min_bid << std::endl;
+        file_out << name << ","
+                 << max_bid << ","
+                 << average_bid << ","
+                 << min_bid << std::endl;
 
         for (auto const& bid : bids)
         {
-            std::cout << bid.first << " " << bid.second << std::endl;
+            file_out << bid.first << " " << bid.second << std::endl;
         }
     }
+
 }
 
 bool is_product_name(std::string const& s)
