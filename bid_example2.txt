@@ -1,0 +1,13 @@
+OBJECT 1
+p0 9
+p1 10
+p1 11
+p3 19
+OBJECT 2
+OBJECT 3
+p0 5
+p2 19
+p4 1
+p4 -1
+p4 2
+OBJECT 4
