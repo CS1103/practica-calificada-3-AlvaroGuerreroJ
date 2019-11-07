@@ -65,4 +65,5 @@ int main(int argc, char** argv)
             file_out << bid.first << " " << bid.second << std::endl;
         }
     }
+
 }
